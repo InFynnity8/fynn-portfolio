@@ -20,7 +20,7 @@
 
 @layer base {
   body {
-    @apply text-[14px] font-primary bg-primary  text-white leading-loose xl:mx-48;
+    @apply text-[15px] font-primary bg-primary  text-white leading-loose xl:mx-48;
   }
   .h1{
     @apply text-[40px] xl:text-[55px] leading-[1.1] font-semibold
