@@ -19,7 +19,7 @@ module.exports = {
 			xl: '1200px',
 		},
 		fontFamily: {
-			primary:  ['JetBrains Mono'],
+			primary:  ['JetBrains Mono', 'Monospace'],
 		},
 		extend: {
 			colors: {
