@@ -1,27 +1,22 @@
 import Link from "next/link";
-import {
-  FaTwitter,
-  FaYoutube,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const socials = [
   {
     icon: <FaGithub />,
-    url: "https://github.com/fynndesign",
+    url: "https://github.com/InFynnity8",
   },
   {
     icon: <FaTwitter />,
-    url: "https://twitter.com/fynndesign",
+    url: "https://x.com/sackey_fynn",
   },
   {
     icon: <FaInstagram />,
-    url: "https://www.facebook.com/fynndesign",
+    url: "https://www.instagram.com/sackeyemmanuelfynn/",
   },
   {
-    icon: <FaYoutube />,
-    url: "https://www.youtube.com/fynndesign",
+    icon: <FaLinkedin />,
+    url: "https://www.linkedin.com/in/emmanuel-fynn-sackey-a26399278/",
   },
 ];
 

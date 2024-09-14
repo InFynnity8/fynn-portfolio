@@ -5,7 +5,7 @@ import StairTransition from "@/components/StairTransition";
 
 
 export const metadata = {
-  title: "Portfolio",
+  title: "My Portfolio",
   description: "Current Portfolio",
 };
 

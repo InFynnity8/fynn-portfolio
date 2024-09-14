@@ -92,7 +92,7 @@ const education = {
   items: [
     {
       institution: "KNUST",
-      degree: "Bsc. Comuter Science",
+      degree: "Bsc. Computer Science",
       duration: "2023 - Present",
     },
     {
