@@ -7,7 +7,7 @@ const stats = [
     text: "Years of experience",
   },
   {
-    num: 19,
+    num: 10,
     text: "Projects completed",
   },
   {
@@ -15,7 +15,7 @@ const stats = [
     text: "Technologies mastered",
   },
   {
-    num: 617,
+    num: 607,
     text: "Code commits",
   },
 ];
@@ -36,7 +36,7 @@ const Stats = () => {
                   end={item.num}
                   duration={5}
                   delay={2}
-                  className="text-3xl xl:text-[40px] font-extrabold"
+                  className="text-3xl xl:text-[45px] font-extrabold"
                   separator=","
                 />
                 <p
