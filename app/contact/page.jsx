@@ -50,8 +50,7 @@ const Contact = () => {
             <form className="flex flex-col gap-3 p-8 bg-[#27272c] rounded-xl">
               <h3 className="text-3xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellendus voluptatem.
+              Reach out, and let’s explore how we can create something exceptional together.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -71,6 +70,7 @@ const Contact = () => {
                     <SelectItem value="est">Web Development</SelectItem>
                     <SelectItem value="cst">Mobile App Development</SelectItem>
                     <SelectItem value="mst">Graphic Design</SelectItem>
+                    <SelectItem value="nst">Employ</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

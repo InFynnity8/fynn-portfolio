@@ -8,29 +8,29 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      " lorem ipsum dolor sit considered quis nost rut interdum. Tempora impedit alias. ",
-    href: "",
+      "Responsive, high-quality websites built to meet your business needs with optimized performance.",
+    href: "contact",
   },
   {
     num: "02",
     title: "Mobile App Development",
     description:
-      " lorem ipsum dolor sit considered quis nost rut interdum. Tempora impedit alias. ",
-    href: "",
+      "Custom, high-performance mobile apps designed to meet your business goals.",
+    href: "contact",
   },
   {
     num: "03",
     title: "Graphic Design",
     description:
-      " lorem ipsum dolor sit considered quis nost rut interdum. Tempora impedit alias. ",
-    href: "",
+      "Creative, impactful designs tailored to elevate your brand.",
+    href: "contact",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Desktop App Development",
     description:
-      " lorem ipsum dolor sit considered quis nost rut interdum. Tempora impedit alias. ",
-    href: "",
+      "Robust, tailored desktop applications to streamline your business operations.",
+    href: "contact",
   },
 ];
 

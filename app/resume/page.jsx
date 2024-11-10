@@ -6,7 +6,7 @@ import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 const about = {
   title: "About Me",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fcelerisque est lectus eu massa. Donec vel dui vel neque malesuada posuere.",
+    "Aspiring software developer with a focus on innovative solutions in AI, healthcare, and business. Skilled in modern web technologies and passionate about advancing technology-driven solutions.",
   info: [
     {
       fieldName: "Name",
@@ -48,7 +48,7 @@ const experience = {
   icon: "",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Jisque est lectus eu massa. Donec neque malesuada posuere.",
+    "Intermediate software developer with hands-on experience with innovative projects in healthcare, business, and agriculture.",
   items: [
     {
       company: "ConnectLoud Africa",
@@ -88,7 +88,7 @@ const education = {
   icon: "",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tisque est lectus eu massa. Donec vel neque malesuada posuere.",
+    "Background in applied technology with practical skills in AI-driven solutions, software development, and business innovation.",
   items: [
     {
       institution: "KNUST",
@@ -128,7 +128,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gscelerisque est lectus eu massa. Donec vel dui vel neque malesuada posuere.",
+    "Proficient in HTML, CSS, JavaScript, Next.js, React.js, Tailwind CSS, TypeScript, React Native, Electron.js,and Node.js, with a focus on building responsive and dynamic web applications.",
   skillsList: [
     {
       skillName: "html 5",

@@ -20,37 +20,38 @@ const projects = [
     category: "frontend",
     title: "Project 1",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est non ipsum pulvinar bibendum.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/projects/project1.jpg",
-    live: "",
-    github: "",
+      "Created a modern, responsive fashion website using Next.js, featuring dynamic product listings, user-friendly navigation, and fast loading times.",
+    stack: [ 
+      { name: "Next.js" },
+      { name: "Typescript" },
+      { name: "Tailwind.css" }],
+    image: "/assets/projects/otm.png",
+    live: "https://sunny-pixie-46d633.netlify.app/",
+    github: "https://github.com/InFynnity8/otmwebsite",
   },
   {
     num: "02",
     category: "fullstack",
     title: "Project 2",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est non ipsum pulvinar bibendum.",
-    stack: [{ name: "Next.js" }, { name: "Node.js" }, { name: "Tailwind.css" }],
-    image: "/assets/projects/project2.jpg",
-    live: "",
-    github: "",
+      "Developed a comprehensive web application to streamline patient records, appointment scheduling, and billing. Integrated intuitive UI features to enhance user experience, ensuring efficient healthcare data management and accessibility.",
+    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind.css" }],
+    image: "/assets/projects/health.png",
+    live: "https://rad-kelpie-378f0b.netlify.app/",
+    github: "https://github.com/InFynnity8/Healtcare-Mangement-System",
   },
   {
     num: "03",
     category: "frontend",
     title: "Project 3",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est non ipsum pulvinar bibendum.",
+      "The site features smooth animations and dynamic content, creating an interactive experience for users to explore projects and skills.",
     stack: [
-      { name: "React.js" },
-      { name: "Typescript" },
-      { name: "Tailwind.css" },
+      { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }
     ],
-    image: "/assets/projects/project3.jpg",
-    live: "",
-    github: "",
+    image: "/assets/projects/interhub.png",
+    live: "https://fabulous-conkies-4ea278.netlify.app/",
+    github: "https://github.com/InFynnity8/internHub",
   },
 ];
 
@@ -151,7 +152,7 @@ const Work = () => {
                           src={project.image}
                           alt=""
                           fill
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
                     </div>
