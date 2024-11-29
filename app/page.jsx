@@ -26,7 +26,7 @@ const Home = () => {
             </p>
             {/* buttons and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-4">
-              <a href="/CV.pdf" download>
+              <a href="/CV-Fynn.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"
