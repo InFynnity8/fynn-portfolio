@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/emmanuel-fynn-sackey-a26399278/",
+    url: "https://www.linkedin.com/in/sackeyemmanuelfynn/",
   },
 ];
 
@@ -25,7 +25,7 @@ const Social = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link key={index} href={item.url} className={iconStyles}>
+          <Link key={index} target="blank" href={item.url} className={iconStyles}>
             {item.icon}
           </Link>
         );
