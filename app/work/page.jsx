@@ -160,7 +160,7 @@ const Work = () => {
                 );
               })}
               {/* slider buttons */}
-              <WorkSliderBtns />
+              <WorkSliderBtns projectNum={project.num}/>
             </Swiper>
           </div>
         </div>
