@@ -14,8 +14,9 @@ import {
 } from "@/components/ui/select";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import axios from 'axios';
-import {useState} from 'react'
+import axios from "axios";
+import { useState } from "react";
+import Image from "next/image";
 
 const info = [
   {
@@ -36,22 +37,29 @@ const info = [
 ];
 
 const Contact = () => {
-  const [fname, setFname] = useState('');
-  const [lname, setLname] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [service, setService] = useState('');
-  const [message, setMessage] = useState('');
-  let name = fname + ' ' + lname 
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  let name = fname + " " + lname;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {const response = await axios.post('https://portfolio-backend-ijs9.onrender.com/contact', {name, email, phone, service, message})
-    alert(response.data)  }  
-    catch (error) {
-        console.log(error)
-    } 
-}
+    setIsLoading(true);
+    try {
+      const response = await axios.post(
+        "https://portfolio-backend-ijs9.onrender.com/contact",
+        { name, email, phone, service, message }
+      );
+      alert(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+    setIsLoading(false);
+  };
 
   return (
     <motion.section
@@ -66,25 +74,52 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[20px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-3 p-8 bg-[#27272c] rounded-xl"  onSubmit={handleSubmit}>
+            <form
+              className="flex flex-col gap-3 p-8 bg-[#27272c] rounded-xl"
+              onSubmit={handleSubmit}
+            >
               <h3 className="text-3xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-              Reach out, and let’s explore how we can create something exceptional together.
+                Reach out, and let’s explore how we can create something
+                exceptional together.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <Input type="firstname" placeholder="Firstname" value={fname} onChange={(e)=> setFname(e.target.value)}/>
-                <Input type="lastname" placeholder="Lastname" value={lname} onChange={(e)=> setLname(e.target.value)}/>
-                <Input type="email" placeholder="Email address" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-                <Input type="phone" placeholder="Phone number" value={phone} onChange={(e)=> setPhone(e.target.value)}/>
+                <Input
+                  type="firstname"
+                  placeholder="Firstname"
+                  value={fname}
+                  onChange={(e) => setFname(e.target.value)}
+                  required={true}
+                />
+                <Input
+                  type="lastname"
+                  placeholder="Lastname"
+                  value={lname}
+                  onChange={(e) => setLname(e.target.value)}
+                />
+                <Input
+                  type="email"
+                  placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required={true}
+                />
+                <Input
+                  type="phone"
+                  placeholder="Phone number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required={true}
+                />
               </div>
               {/* select */}
-              <Select >
+              <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectGroup >
+                  <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
                     <SelectItem value="est">Web Development</SelectItem>
                     <SelectItem value="cst">Mobile App Development</SelectItem>
@@ -97,11 +132,31 @@ const Contact = () => {
               <Textarea
                 placeholder="Type your message here."
                 className="h-[120px]"
-                value={message} onChange={(e)=> setMessage(e.target.value)}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required={true}
               />
               {/* button */}
-              <Button className="max-w-40" size="md">
-                Send Message
+              <Button
+                type="submit"
+                disabled={isLoading}
+                className='max-w-40'
+                size="md"
+              >
+                {isLoading ? (
+                  <div className="flex items-center gap-4">
+                    <Image
+                      src="/assets/loader.svg"
+                      alt="loader"
+                      width={24}
+                      height={24}
+                      className="animate-spin"
+                    />
+                    Loading...
+                  </div>
+                ) : (
+                  "Send Message"
+                )}
               </Button>
             </form>
           </div>
