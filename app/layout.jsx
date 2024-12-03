@@ -9,7 +9,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  console.log(process.env.NEXT_PUBLIC_GAID);
   return (
     <html lang="en">
       <head>
