@@ -118,7 +118,7 @@ const education = {
     },
     {
       institution: "Online Course",
-      degree: "Programming",
+      degree: "Python Programming",
       duration: "2018-2019",
     },
   ],
