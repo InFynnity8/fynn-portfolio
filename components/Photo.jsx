@@ -42,7 +42,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#fa7f20"
+            stroke='hsl(75,94%, 57%)'
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -25,8 +25,8 @@ module.exports = {
 			colors: {
 				primary: "#1c1c22",
 				accent: {
-					DEFAULT: '#fa7f20',
-					hover: '#d65109',
+					DEFAULT: 'hsl(75,94%, 57%)',
+					hover: 'hsl(90,94%, 57%)',
 				}
 			}
 		},

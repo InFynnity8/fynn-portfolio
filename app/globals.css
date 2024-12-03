@@ -35,7 +35,7 @@
     -webkit-text-stroke: 1px #ffffff;
   }
   .text-outline-hover {
-    -webkit-text-stroke: 1px #fa7f20;
+    -webkit-text-stroke: 1px theme('colors.accent.DEFAULT');
   }
 }
 
