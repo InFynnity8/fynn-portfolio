@@ -17,6 +17,8 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { useState } from "react";
 import Image from "next/image";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const info = [
   {
@@ -46,6 +48,7 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   let name = fname + " " + lname;
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -54,7 +57,16 @@ const Contact = () => {
         "https://portfolio-backend-ijs9.onrender.com/contact",
         { name, email, phone, service, message }
       );
-      alert(response.data);
+      toast.success(`${response.data} 😊`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     } catch (error) {
       console.log(error);
     }
@@ -71,6 +83,18 @@ const Contact = () => {
       className="py-4"
     >
       <div className="container mx-auto">
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         <div className="flex flex-col xl:flex-row gap-[20px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
@@ -140,7 +164,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className='max-w-40'
+                className="max-w-40"
                 size="md"
               >
                 {isLoading ? (
