@@ -7,7 +7,7 @@ const WorkSliderBtns = ({ projectNum }) => {
   let dynamicClass;
   switch (projectNum) {
     case "01":
-      dynamicClass = "bg-accent hover:bg-accent-hover text-primary";
+      dynamicClass = "bg-[#ff8c00] hover:bg-[#ab5601] text-primary";
       break;
     case "02":
       dynamicClass = "bg-green-500 hover:bg-green-700 text-primary";

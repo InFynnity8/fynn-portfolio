@@ -26,7 +26,7 @@ const projects = [
       { name: "Typescript" },
       { name: "Tailwind.css" }],
     image: "/assets/projects/otm.png",
-    live: "https://sunny-pixie-46d633.netlify.app/",
+    live: "https://otmdesigns.netlify.app/",
     github: "https://github.com/InFynnity8/otmwebsite",
   },
   {
@@ -37,7 +37,7 @@ const projects = [
       "Developed a comprehensive web application to streamline patient records, appointment scheduling, and billing. Integrated intuitive UI features to enhance user experience, ensuring efficient healthcare data management and accessibility.",
     stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind.css" }],
     image: "/assets/projects/health.png",
-    live: "https://rad-kelpie-378f0b.netlify.app/",
+    live: "https://carepulse-fynn.netlify.app/",
     github: "https://github.com/InFynnity8/Healtcare-Mangement-System",
   },
   {
@@ -50,7 +50,7 @@ const projects = [
       { name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }
     ],
     image: "/assets/projects/interhub.png",
-    live: "https://fabulous-conkies-4ea278.netlify.app/",
+    live: "https://internhubhq.netlify.app/",
     github: "https://github.com/InFynnity8/internHub",
   },
 ];
@@ -105,7 +105,7 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                <Link target="_blank" href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="group w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center">
@@ -118,7 +118,7 @@ const Work = () => {
                   </TooltipProvider>
                 </Link>
                 {/* github project button */}
-                <Link href={project.github}>
+                <Link target="_blank" href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="group w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center">
