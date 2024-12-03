@@ -8,7 +8,7 @@ const socials = [
   },
   {
     icon: <FaTwitter />,
-    url: "https://x.com/sackey_fynn",
+    url: "https://x.com/BoscoFynn",
   },
   {
     icon: <FaInstagram />,
