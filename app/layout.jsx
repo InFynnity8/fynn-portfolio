@@ -2,7 +2,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
-import Script from "next/script";
 
 export const metadata = {
   title: "My Portfolio",
@@ -10,12 +9,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log(process.env.NEXT_PUBLIC_GAID);
   return (
     <html lang="en">
       <head>
-        <Script
+        <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GAID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GAID}`}
         />
         <script
           dangerouslySetInnerHTML={{
@@ -23,10 +23,10 @@ export default function RootLayout({ children }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());   
-          gtag('config', '${process.env.GAID}');`,
+          gtag('config', '${process.env.NEXT_PUBLIC_GAID}');`,
           }}
         />
-      </head>
+        </head>
       <body>
         <Header />
         <StairTransition />
