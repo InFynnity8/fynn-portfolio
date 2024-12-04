@@ -48,7 +48,6 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   let name = fname + " " + lname;
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -57,10 +56,10 @@ const Contact = () => {
         "https://portfolio-backend-ijs9.onrender.com/contact",
         { name, email, phone, service, message }
       );
-      toast.success(`${response.data} 😊`, {
+      toast.success(`${response.data} `, {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: true,
+        hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
@@ -86,7 +85,7 @@ const Contact = () => {
         <ToastContainer
           position="top-right"
           autoClose={5000}
-          hideProgressBar
+          hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
           rtl={false}
