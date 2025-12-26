@@ -1,24 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import content from "@/lib/content";
 import Link from "next/link";
-import ReactTypingEffect from "react-typing-effect";
+import { TypeAnimation } from 'react-type-animation'; // New import
 import Social from "@/components/Social";
+
+// const DynamicReactTypingEffect = dynamic(() => import("react-typing-effect"), {
+//   ssr: false,
+// }); // Remove dynamic import for old library
 
 const Hero: React.FC = () => {
   return (
     <div className="text-center">
-      <ReactTypingEffect
-        text={[content.title]}
-        speed={100}
-        eraseSpeed={50}
-        eraseDelay={8000}
-        typingDelay={1000}
-        className="text-xl"
-      />
+      <Suspense fallback={<span className="text-xl">{content.title}</span>}>
+        <TypeAnimation
+          sequence={[
+            content.title,
+            1000, // wait 1s before repeating
+          ]}
+          wrapper="span"
+          speed={50}
+          deletionSpeed={90} // Adjust deletion speed
+          repeat={Infinity}
+          className="text-xl"
+        />
+      </Suspense>
       <h1 className="h1 mb-3">
         Hello I'm
         <span className="text-accent"> {content.name.split(" ")[0]}</span>

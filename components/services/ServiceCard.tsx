@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 import { RxCrop, RxDesktop, RxPencil2, RxReader, RxRocket, RxArrowTopRight } from "react-icons/rx";

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -56,8 +56,9 @@ import content from "@/lib/content";
 
 const getIconKey = (skill: string) => {
   const lowerSkill = skill.toLowerCase();
+  if (lowerSkill.includes("next.js")) return "next"; // Prioritize Next.js icon
   if (lowerSkill.includes("node.js")) return "node";
-  if (lowerSkill.includes("react / next.js") || lowerSkill.includes("react native")) return "react";
+  if (lowerSkill.includes("react") || lowerSkill.includes("react native")) return "react";
   if (lowerSkill.includes("tailwind css")) return "tailwind";
   if (lowerSkill.includes("restful apis")) return "restful";
   if (lowerSkill.includes("websockets")) return "websockets";
