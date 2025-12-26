@@ -15,12 +15,45 @@
     .font-primary {
       font-family: theme('fontFamily.primary');
     }
+
+  /* Pointer glow helpers using CSS variables set by PointerGlow component */
+  .pointer-glow {
+    position: fixed;
+    left: calc(var(--pointer-x, 50%) - 200px);
+    top: calc(var(--pointer-y, 50%) - 200px);
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    filter: blur(40px);
+    opacity: 0.15;
+    transform: translate3d(0,0,0);
+    transition: opacity 250ms ease, transform 120ms linear;
+    z-index: 40;
+  }
 }
 
 
 @layer base {
   body {
-    @apply text-[15px] font-primary bg-primary  text-white leading-loose xl:mx-[185px] ;
+    @apply text-[15px] font-primary bg-primary text-white leading-loose;
+    background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
+      radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+    background-size: 100px 100px;
+  }
+  .skip-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 8px 12px;
+    z-index: 60;
+    transform: translateY(-120%);
+  }
+  .skip-link:focus {
+    transform: translateY(0%);
   }
   .h1{
     @apply text-[40px] xl:text-[55px] leading-[1.1] font-semibold
@@ -39,3 +72,15 @@
   }
 }
 
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 30s linear infinite;
+}
