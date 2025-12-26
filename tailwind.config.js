@@ -8,10 +8,10 @@ module.exports = {
 	],
 	prefix: "",
 	theme: {
-		container: {
-			center: 'true',
-			padding: '15px'
-		},
+			container: {
+				center: true,
+				padding: '1rem',
+			},
 		screens: {
 			sm: '640px',
 			md: '768px',
@@ -19,16 +19,26 @@ module.exports = {
 			xl: '1200px',
 		},
 		fontFamily: {
-			primary:  ['JetBrains Mono', 'Monospace'],
+			primary: ['Inter', 'sans-serif'],
 		},
 		extend: {
 			colors: {
-				primary: "#1c1c22",
+				primary: "#0c0c0c",
+        secondary: "#1a1a1a",
 				accent: {
-					DEFAULT: 'hsl(75,94%, 57%)',
-					hover: 'hsl(90,94%, 57%)',
+					DEFAULT: '#ffffff',
+					hover: '#f2f2f2',
 				}
-			}
+			},
+      animation: {
+        'scroll-x': 'scroll-x 40s linear infinite',
+      },
+      keyframes: {
+        'scroll-x': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
 		},
 	},
 	plugins: [require("tailwindcss-animate")]
