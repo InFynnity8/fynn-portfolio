@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
   const onSubmit = async (data: FormData) => {
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/contact`,
+        `${process.env.NEXT_PUBLIC_API_URL}`,
         data
       );
       toast.success(response.data);
